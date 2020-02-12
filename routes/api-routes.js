@@ -1,4 +1,5 @@
-const db = require("../models");
+// const db = require("../models");
+
 
 // get route for all workouts
 // get route for one workout

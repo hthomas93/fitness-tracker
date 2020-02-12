@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/hthomas93/fitness-tracker/issues"
   },
-  "homepage": "https://github.com/hthomas93/fitness-tracker#readme"
+  "homepage": "https://github.com/hthomas93/fitness-tracker#readme",
+  "dependencies": {
+    "logger": "0.0.1",
+    "mongoose": "^5.8.11",
+    "morgan": "^1.9.1"
+  }
 }
