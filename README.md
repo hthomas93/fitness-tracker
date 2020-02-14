@@ -17,3 +17,6 @@ The workouts are broken into two categories: cardio and resistance training.
 
 Once the workouts have been entered, the user can click the Dashboard button in the navbar to view a dynamic graph of their workout stats for the week.
 ![stats](./assets/images/stats.png "Stats!")
+
+[Here is a link to the project's github repo!](https://github.com/hthomas93/fitness-tracker)
+
