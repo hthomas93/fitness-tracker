@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../models");
 
 // Sets the routes page up to be exported
 module.exports = function (app) {
@@ -9,6 +9,15 @@ module.exports = function (app) {
         }).catch(err => {
             res.json(err);
         })
+    })
+
+    app.get("/api/workouts/range", function (req, res) {
+        db.Workout.find({}).then(dbWorkout => {
+            res.json(dbWorkout)
+        })
+            .catch(err => {
+                res.json(err)
+            })
     })
 
     // Gets the workout whose id matches the parameter in the route path
@@ -43,14 +52,5 @@ module.exports = function (app) {
                 res.json(dbWorkout);
             }
         })
-    })
-
-    app.get("/api/workouts/range", function (req, res) {
-        db.Workout.find({}).then(dbWorkout => {
-            res.json(dbWorkout)
-        })
-            .catch(err => {
-                res.json(err)
-            })
     })
 }

@@ -8,7 +8,7 @@ const logger = require("morgan");
 
 
 // Initializes port
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 8080;
 
 // initializes database
 const app = express();
@@ -19,12 +19,12 @@ app.use(logger("dev"));
 // Tells the server what kind of data to use
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Looks inside the public folder and displays any static files, such as HTML documents
+app.use(express.static("public"));
 
 // Connect to the database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
-// Looks inside the public folder and displays any static files, such as HTML documents
-app.use(express.static("public"));
 
 // Creates 
 db.Workout.create({ name: "Fitness Tracker" })
