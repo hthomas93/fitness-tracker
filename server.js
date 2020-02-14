@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080;
 
 // initializes database
 const app = express();
-const db = require("./models")
+const db = require("./models/index")
 
 app.use(logger("dev"));
 
