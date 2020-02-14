@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/index");
 
 // Sets the routes page up to be exported
 module.exports = function (app) {
