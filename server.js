@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 8080;
 
 // initializes database
 const app = express();
-const db = require("./models/index")
 
 app.use(logger("dev"));
 
@@ -25,14 +24,6 @@ app.use(express.static("public"));
 // Connect to the database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
-
-// Creates 
-db.Workout.create({ name: "Fitness Tracker" })
-    .then(dbWorkout => {
-        console.log(dbWorkout);
-    }).catch(err => {
-        res.json(err);
-    })
 
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes")(app);
